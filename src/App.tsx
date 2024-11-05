@@ -1,11 +1,13 @@
 
 import './App.css'
-import {Items} from "./componets/Items"
+import { MappedData } from './componets/MappedData'
+
 function App() {
 
   return (
     <>
-    <Items/>
+    hi
+    <MappedData todos={[]}/>
     </>
   )
 }
