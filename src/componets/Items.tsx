@@ -1,7 +1,7 @@
+import { Data } from "./data";
 
 
-
-export function Items(){
+export function Items() {
   const items = [
     " Michael Thompson",
     "Sarah Bennett",
@@ -19,15 +19,13 @@ export function Items(){
     "Megan Phillips",
     "Daniel Ross",
   ];
-  return(
-
-   <ul>
-     {items.map((items) => (
-       <div>{items}</div>
-     ))}
-   </ul>
- 
-
-
-)
+  return (
+    <>
+    <ul>
+      {items.map((items) => (
+        <div>{items}</div>
+      ))}
+    </ul>
+    </>
+  );
 }
