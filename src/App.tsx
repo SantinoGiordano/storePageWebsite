@@ -1,13 +1,11 @@
 
 import './App.css'
-
-import { Names } from './componets/Names'
-
+import {Items} from "./componets/Items"
 function App() {
 
   return (
     <>
-    <Names/>
+    <Items/>
     </>
   )
 }

@@ -1,5 +1,8 @@
-export function Names() {
-  const names = [
+
+
+
+export function Items(){
+  const items = [
     " Michael Thompson",
     "Sarah Bennett",
     "James Miller",
@@ -16,11 +19,15 @@ export function Names() {
     "Megan Phillips",
     "Daniel Ross",
   ];
-  names.map((name: string, index: number) => console.log(name, index));
+  return(
 
-  const namesList: string = names.join("\n");
-  console.log(namesList);
+   <ul>
+     {items.map((items) => (
+       <div>{items}</div>
+     ))}
+   </ul>
+ 
 
 
-  return <div>{namesList}</div>;
+)
 }
