@@ -1,12 +1,8 @@
+import "../styles/gridContainers.css"
+import "../styles/itemCard.css"
 
 
-interface ITodo {
-  name: string;
-  description: string;
-  price: number;
-}
-
-export function MappedData(_props: { todos: ITodo[] }) {
+export function MappedData( ) {
   
     const data = [
     {
@@ -70,14 +66,17 @@ export function MappedData(_props: { todos: ITodo[] }) {
   ];
 
   return (
-    <div className="dataStyle">
+    <>
+    <div className="gridContainer">
       {data.map((data) => (
-        <>
+        <div className="itemCard">
           <h4>{data.name}</h4>
           <p>{data.description} / ${data.price}</p>
-        </>
+        </div>
       ))}
-    </div>
+      </div>
+
+      </>
   );
 }
 {/* <div class="card" style="width: 18rem;">

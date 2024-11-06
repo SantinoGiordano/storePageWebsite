@@ -1,0 +1,7 @@
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    font-size: clamp(12px, 1.75vw, 18px);
+  }
+  
