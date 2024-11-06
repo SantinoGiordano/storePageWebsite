@@ -1,13 +1,25 @@
 .header{
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 4%;
     /* background: linear-gradient(rgb(26, 11, 0),rgb(94, 65, 4)); */
     text-align: center;
-    background-color:black ;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif  
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-image: url('backgroundHeader.jpg'); /* Path to your image */
+    background-size: cover;        /* Ensure the image covers the entire div */
+    background-position: center;   /* Center the image */
+    background-attachment: fixed;  /* Parallax effect */
+    background-repeat: no-repeat;  /* No repeat */
+    height: 300px;                 /* Adjust height as needed */
+    display: flex; 
 }
 
 .h1{
     text-align: right;
     font-size: 5vw;
+}
+
+.title{
+    padding:2%;
+    color: whitesmoke;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }

@@ -1,10 +1,10 @@
-import "../styles/gridContainers.css"
-import "../styles/itemCard.css"
+import "../styles/gridContainers.css";
+import "../styles/itemCard.css";
+import "../styles/header.css";
+import { useState } from "react";
 
-
-export function MappedData( ) {
-  
-    const data = [
+export function MappedData() {
+  const data = [
     {
       name: "Eco-Friendly Water Bottle",
       description:
@@ -65,25 +65,29 @@ export function MappedData( ) {
     },
   ];
 
+  const [total, setTotal] = useState(0);
+
+  const handleClick = (price: number) => {
+    setTotal(total + price);
+  };
+
   return (
     <>
-    <div className="gridContainer">
-      {data.map((data) => (
-        <div className="itemCard">
-          <h4>{data.name}</h4>
-          <p>{data.description}</p><p>${data.price}</p>
-        </div>
-      ))}
+      <h1 className="title">Total: ${total.toFixed(2)}</h1>
+      <hr />
+      <div className="gridContainer">
+        {data.map((data) => (
+          <div
+            key={data.name}
+            className="itemCard"
+            onClick={() => handleClick(data.price)}
+          >
+            <h4>{data.name}</h4>
+            <p>{data.description}</p>
+            <p>${data.price}</p>
+          </div>
+        ))}
       </div>
-
-      </>
+    </>
   );
 }
-{/* <div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div> */}
