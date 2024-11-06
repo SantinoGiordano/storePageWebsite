@@ -1,13 +1,13 @@
-
-import './App.css'
+import './styles/backgrounds.css'
 import { MappedData } from './componets/MappedData'
 
 function App() {
 
   return (
     <>
-    hi
-    <MappedData todos={[]}/>
+    <div className='background'>
+    <MappedData />
+    </div>
     </>
   )
 }

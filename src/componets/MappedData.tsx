@@ -71,7 +71,7 @@ export function MappedData( ) {
       {data.map((data) => (
         <div className="itemCard">
           <h4>{data.name}</h4>
-          <p>{data.description} / ${data.price}</p>
+          <p>{data.description}</p><p>${data.price}</p>
         </div>
       ))}
       </div>
