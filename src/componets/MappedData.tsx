@@ -1,7 +1,7 @@
 import "../styles/gridContainers.css";
 import "../styles/itemCard.css";
 import "../styles/header.css";
-import "../styles/images.css"
+import "../styles/images.css";
 import { useState } from "react";
 
 export function MappedData() {
@@ -37,36 +37,42 @@ export function MappedData() {
       name: "Stainless Steel Travel Mug",
       description:
         "Leak-proof travel mug with double-wall insulation to keep beverages hot or cold.",
-      price: 18.75,img: "https://placehold.co/100x100"
+      price: 18.75,
+      img: "https://placehold.co/100x100",
     },
     {
       name: "LED Desk Lamp",
       description:
         "Adjustable desk lamp with multiple brightness settings and USB charging port.",
-      price: 35.0,img: "https://placehold.co/100x100"
+      price: 35.0,
+      img: "https://placehold.co/100x100",
     },
     {
       name: "Portable Charger",
       description:
         "Compact power bank with fast-charging capability for all your devices.",
-      price: 25.5,img: "https://placehold.co/100x100"
+      price: 25.5,
+      img: "https://placehold.co/100x100",
     },
     {
       name: "Fitness Tracker Watch",
       description:
         "Water-resistant fitness tracker with heart rate monitor and step counter.",
-      price: 54.99,img: "https://placehold.co/100x100"
+      price: 54.99,
+      img: "https://placehold.co/100x100",
     },
     {
       name: "Ceramic Plant Pot",
       description: "Stylish ceramic pot suitable for small indoor plants.",
-      price: 12.3,img: "https://placehold.co/100x100"
+      price: 12.3,
+      img: "https://placehold.co/100x100",
     },
     {
       name: "Multi-Tool Kit",
       description:
         "Versatile multi-tool kit with pliers, screwdriver, knife, and more.",
-      price: 42.6,img: "https://placehold.co/100x100"
+      price: 42.6,
+      img: "https://placehold.co/100x100",
     },
   ];
 
@@ -78,7 +84,11 @@ export function MappedData() {
 
   return (
     <>
-      <h1 className="title">Total: ${total.toFixed(2)}</h1>
+      <h1 className="title">
+        <span>Total:</span>
+        <div className="total">${total.toFixed(2)}</div>
+      </h1>
+
       <hr />
       <div className="gridContainer">
         {data.map((data) => (
@@ -87,7 +97,7 @@ export function MappedData() {
             className="itemCard"
             onClick={() => handleClick(data.price)}
           >
-            <img className="image" src={data.img}/>
+            <img className="image" src={data.img} />
             <h4>{data.name}</h4>
             <p>{data.description}</p>
             <p>${data.price}</p>

@@ -19,7 +19,18 @@
 }
 
 .title{
+    display: flex;
+    align-items: center; 
+    gap: 8px; 
     padding:2%;
     color: whitesmoke;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.total{
+    color: black;
+    background-color: white;
+    padding: 2px;
+    border-radius: 8px;
+    box-shadow: inset  0px 4px 8px rgba(0, 0, 0, 0.3);;
 }
