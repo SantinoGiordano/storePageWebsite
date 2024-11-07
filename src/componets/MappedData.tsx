@@ -1,6 +1,7 @@
 import "../styles/gridContainers.css";
 import "../styles/itemCard.css";
 import "../styles/header.css";
+import "../styles/images.css"
 import { useState } from "react";
 
 export function MappedData() {
