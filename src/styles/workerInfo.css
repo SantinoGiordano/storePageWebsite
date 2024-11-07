@@ -1,35 +1,47 @@
 .employees-container {
     display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-.employee-card {
+    flex-wrap: wrap;
+    gap: 20px;
+    width:100%
+  }
+  
+  .employee-card {
     display: flex;
-    margin:2%;
-    align-items: center;
     background-color: #f9f9f9;
-    border-radius: 12px;
+    padding: 10px;
+    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 1%;
-}
-.workerImg {
+    width:100%
+  }
+  
+  .workerDetails {
+    display: flex;
+    align-items: center;
+  }
+  
+  .workerImg {
     border-radius: 50%;
-    
-}
-
-.workerDetails {
+    border-radius: 12px;
+    margin: 2%;
+    height: 10vw;
+    width: 7vw;
+  }
+  
+  .workerInfo {
     display: flex;
     flex-direction: column;
-}
-
-.workerName {
-    font-size: 1.2vw;
+  }
+  
+  .workerName {
     font-weight: bold;
-    color: #333;
-}
-
-.workerPosition {
-    font-size: 1em;
+    font-size: 1.2em;
+  }
+  
+  .workerMeta {
     color: #555;
-    margin-top: 4px;
-}
+    font-size: 0.9em;
+  }
+  
+  .workerMeta .workerPosition {
+    font-style: italic;
+  }

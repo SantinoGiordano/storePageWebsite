@@ -1,25 +1,28 @@
 import "../styles/backgrounds.css";
 import "../styles/images.css";
 import "../styles/workerInfo.css";
+import "..//styles/scrollingText.css"
+import { useEffect } from "react";
 
 export function About() {
-  const employees = [
+  
+    const employees = [
     {
       name: "Alice Johnson",
       age: 32,
-      img: "https://placehold.co/100x100",
+      img: "BlackShirtBoy.jpg",
       position: "Marketing Manager",
     },
     {
       name: "Robert Smith",
       age: 45,
-      img: "https://placehold.co/100x100",
+      img: "blueShirtPerson.jpg",
       position: "Chief Financial Officer",
     },
     {
       name: "Emily Chen",
       age: 28,
-      img: "https://placehold.co/100x100",
+      img: "blueShirtBoy.jpg",
       position: "Product Designer",
     },
     {
@@ -42,28 +45,52 @@ export function About() {
     },
   ];
 
+  useEffect(() => {
+    const hiddenElements = document.querySelectorAll<HTMLElement>(".hidden");
+
+    const observerOptions: IntersectionObserverInit = {
+      threshold: 0.1,
+    };
+
+    const observerCallback: IntersectionObserverCallback = (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const targetElement = entry.target as HTMLElement;
+          targetElement.classList.add("show");
+          observer.unobserve(targetElement);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    hiddenElements.forEach((element) => observer.observe(element));
+
+    return () => observer.disconnect(); // Clean up observer on component unmount
+  }, []);
   return (
     <>
-      <p className="teamworkBackground">
-        <p className="box">
+      <div className="content"></div>
+      <div className="teamworkBackground">
+        <div className="ourTeam">Our Team</div>
+        <div className="box">
           <div className="employees-container">
-            {" "}
             {employees.map((worker) => (
-              <>
-            <div className="employee-card">
+              <div className="employee-card hidden" key={worker.name}>
                 <div className="workerDetails">
-                <img className="workerImg" src={worker.img} />
+                  <img className="workerImg" src={worker.img} alt={`${worker.name}'s photo`} />
+                  <div className="workerInfo">
                     <div className="workerName">{worker.name}</div>
-                    <div className="workerPosition">{worker.position}</div>
-                  <div className="workerAge">{worker.age}</div>
-                  <p/>
+                    <div className="workerMeta">
+                      <span className="workerPosition">{worker.position}</span>, 
+                      <span className="workerAge"> Age: {worker.age}</span>
+                    </div>
+                  </div>
                 </div>
-            </div>
-              </>
+              </div>
             ))}
           </div>
-        </p>
-      </p>
+        </div>
+      </div>
     </>
   );
 }
