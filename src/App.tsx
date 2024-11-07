@@ -1,6 +1,7 @@
 import './styles/backgrounds.css'
 import { MappedData } from './componets/MappedData'
 import { Header } from './componets/Header'
+import { About } from './componets/About'
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
     <div className='background'>
     <Header/>
     <MappedData />
+    <About/>
     </div>
     </>
   )

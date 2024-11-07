@@ -1,4 +1,22 @@
-.background{
-    text-align:left ;
-    background-color: rgb(56, 54, 54);
+.background {
+  text-align: left;
+  background-color: rgb(56, 54, 54);
+}
+.teamworkBackground {
+  background-image: url("teamworkBackground.jpg"); /* Path to your image */
+  background-size: cover; /* Ensure the image covers the entire div */
+  background-position: center; /* Center the image */
+  background-attachment: fixed; /* Parallax effect */
+  background-repeat: no-repeat; /* No repeat */
+  height: 1000px; /* Adjust height as needed */
+  display: flex;
+}
+.box {
+  margin-right: 1%;
+  margin-left: 50%;
+  width: 50%; /* Covers right half of the background */
+  height: 96%;
+  background-color: rgb(56, 54, 54); /* Semi-transparent black */
+  pointer-events: none; /* Allows clicks to pass through overlay */
+    border-radius: 5%;
 }
