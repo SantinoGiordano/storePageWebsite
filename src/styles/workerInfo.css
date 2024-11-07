@@ -1,0 +1,35 @@
+.employees-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.employee-card {
+    display: flex;
+    margin:2%;
+    align-items: center;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1%;
+}
+.workerImg {
+    border-radius: 50%;
+    
+}
+
+.workerDetails {
+    display: flex;
+    flex-direction: column;
+}
+
+.workerName {
+    font-size: 1.2vw;
+    font-weight: bold;
+    color: #333;
+}
+
+.workerPosition {
+    font-size: 1em;
+    color: #555;
+    margin-top: 4px;
+}

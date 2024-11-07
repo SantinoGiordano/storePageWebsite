@@ -2,5 +2,10 @@
     width: 30%;          
     height: auto;         
     object-fit: cover;    
-    border-radius: 8px 8px 0 0;
+    border-radius: 12px;
+}
+.workerImg{
+text-align: right;
+border-radius: 12px;
+margin:2%;
 }
