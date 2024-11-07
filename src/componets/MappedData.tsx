@@ -86,6 +86,7 @@ export function MappedData() {
             className="itemCard"
             onClick={() => handleClick(data.price)}
           >
+            <img src={data.img}/>
             <h4>{data.name}</h4>
             <p>{data.description}</p>
             <p>${data.price}</p>
