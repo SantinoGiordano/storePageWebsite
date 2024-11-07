@@ -77,25 +77,28 @@ export function MappedData() {
   ];
 
   const [total, setTotal] = useState(0);
-
-  const handleClick = (price: number) => {
+  const [itemNum, setItemNum] = useState(0)
+  
+  const handleClickPrice = (price: number) => {
     setTotal(total + price);
+    setItemNum(itemNum + 1)
   };
 
   return (
     <>
       <h1 className="title">
         <span>Total:</span>
-        <div className="total">${total.toFixed(2)}</div>
+        <div className="total">${total.toFixed(2)}</div><span>x {itemNum}</span>
       </h1>
-
       <hr />
+      {/* this code and up bring it into  new window for menus and list  */}
+      
       <div className="gridContainer">
         {data.map((data) => (
           <div
             key={data.name}
             className="itemCard"
-            onClick={() => handleClick(data.price)}
+            onClick={() => handleClickPrice(data.price)}
           >
             <img className="image" src={data.img} />
             <h4>{data.name}</h4>

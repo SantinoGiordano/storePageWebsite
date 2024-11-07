@@ -28,19 +28,19 @@ export function About() {
     {
       name: "James Lee",
       age: 39,
-      img: "https://placehold.co/100x100",
+      img: "redShirtGirl.jpg",
       position: "Software Engineer",
     },
     {
       name: "Sophia Patel",
       age: 31,
-      img: "https://placehold.co/100x100",
+      img: "whiteShirtGirl.jpg",
       position: "Operations Manager",
     },
     {
       name: "David Martinez",
       age: 50,
-      img: "https://placehold.co/100x100",
+      img: "blueBeardBoy.jpg",
       position: "Chief Executive Officer",
     },
   ];
@@ -71,7 +71,7 @@ export function About() {
     <>
       <div className="content"></div>
       <div className="teamworkBackground">
-        <div className="ourTeam">Our Team</div>
+        <div className="ourTeam">OurTeam<hr/></div>
         <div className="box">
           <div className="employees-container">
             {employees.map((worker) => (

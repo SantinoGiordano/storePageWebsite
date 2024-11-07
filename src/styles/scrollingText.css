@@ -9,6 +9,14 @@
     transform: translateY(0);
   }
 
-  .ourTeam{
-    text-align: center;
+  .ourTeam {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:10vw;
+    position: sticky;
+    top: 50%;
+    margin: 0 20px;
+    color: whitesmoke;
+    -webkit-text-stroke: 1px black;
+    transform: translate(50px, 200px);
+    text-shadow: 2px 2px 5px black;
   }
