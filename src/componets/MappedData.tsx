@@ -1,6 +1,7 @@
 import "../styles/gridContainers.css";
 import "../styles/itemCard.css";
 import "../styles/header.css";
+import "../styles/images.css"
 import { useState } from "react";
 
 export function MappedData() {
@@ -86,6 +87,7 @@ export function MappedData() {
             className="itemCard"
             onClick={() => handleClick(data.price)}
           >
+            <img className="image" src={data.img}/>
             <h4>{data.name}</h4>
             <p>{data.description}</p>
             <p>${data.price}</p>
