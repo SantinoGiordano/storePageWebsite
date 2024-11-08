@@ -6,3 +6,7 @@
   
 }
 
+.burgermenu:hover{
+transform: scale(120%);
+cursor: pointer;
+}
