@@ -5,6 +5,7 @@ import "../styles/images.css";
 import { useState } from "react";
 
 export function MappedData() {
+  
   const data = [
     {
       name: "Eco-Friendly Water Bottle",
@@ -91,8 +92,7 @@ export function MappedData() {
         <div className="total">${total.toFixed(2)}</div><span>x {itemNum}</span>
       </h1>
       <hr />
-      {/* this code and up bring it into  new window for menus and list  */}
-      
+    {/* this code and up bring it into  new window for menus and list  */}
       <div className="gridContainer">
         {data.map((data) => (
           <div
