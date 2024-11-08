@@ -23,3 +23,9 @@
   border-radius: 12px;
   
 }
+
+.topNavBar{
+  margin:2%;
+  background-color: rgb(56, 54, 54);
+  text-align: right;
+}

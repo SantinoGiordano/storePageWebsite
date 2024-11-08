@@ -7,6 +7,9 @@ function App() {
 
   return (
     <>
+    <div className='topNavBar'>
+    
+    </div>
     <div className='background'>
     <Header/>
     <MappedData />

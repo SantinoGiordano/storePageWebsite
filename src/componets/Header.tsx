@@ -4,7 +4,7 @@ export function Header(){
     return(
         <>
         <div className="header">
-           <h1 className="h1">Website Design</h1><hr/>
+           <h1 className="h1">Store Page</h1><hr/>
         </div>
         </>
     )
